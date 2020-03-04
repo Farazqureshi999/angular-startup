@@ -1,0 +1,31 @@
+.sign-in {
+	width: 380px;
+	background-color: #FFF;
+	padding: 18px 30px;
+	box-shadow: 0 4px 6px 0 rgba(0,0,0,0.2);
+	> p {
+		font-size: 14px;
+	}
+}
+
+.table-user-roles {
+	th,td {
+		vertical-align: middle;
+		label {
+			margin-bottom: 0;
+		}
+	}
+	.role {
+		min-width: 100px;
+	}
+	.chosen-container-multi .chosen-choices {
+		padding: 6px 12px !important;
+	}
+}
+
+@media screen and (max-width: 575px) {
+	.sign-in {
+		width: 100%;
+		padding: 18px 18px;
+	}
+}

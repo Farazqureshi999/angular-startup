@@ -1,0 +1,203 @@
+.register-wrap {
+    background-color: #FFF;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 2px;
+    margin-bottom: 60px;
+    padding: 40px 100px;
+    min-height: 494px;
+}
+
+.section-heading {
+    font-size: 18px;
+    margin-top: 56px;
+    margin-bottom: 26px;
+}
+
+main {
+    section {
+        h3 {
+            &.title {
+                font-size: 18px;
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
+
+
+.actions {
+    
+    margin-top: 24px;
+    a,.btn {
+        margin-right: 20px;
+        &.btn-blue {
+            padding: 18px 50px;
+        }
+    }
+}
+.wizard-actions {
+    text-align: right;
+    margin-top: 24px;
+    a, button {
+        margin-left: 20px;
+        &.btn-blue {
+            padding: 18px 50px;
+        }
+    }
+}
+.wizard {
+    margin: 0 0 40px 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    li {
+        display: flex;
+        align-items: center;
+        flex: 1;
+        position: relative;
+        svg {
+            fill:rgba(0, 0, 0, 0.25);
+        }
+        &.active {
+            
+            .bullet {
+                background-color: $blue;
+                border-color: $blue;
+            }
+            span {
+                color: $blue;
+            }
+        }
+        &.completed {
+            svg {
+                fill:$green;
+            }
+            .bullet {
+                background-color: $green;
+                border-color: $green;
+            }
+            span {
+                color: $green;
+            }
+        }
+
+        span {
+            display: block;
+        }
+        .count {
+            display: none;
+        }
+        .bullet {
+            width: 16px;
+            height: 16px;
+            border: 1px solid #C4C4C4;
+            border-radius: 50%;
+            margin-right: 18px;
+        }
+        .arrow {
+            margin-left: 20px;
+            // position: absolute;
+            // right: 13px;
+        }
+    }
+}
+
+.content-scroll {
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    padding: 38px 26px;
+    height: 530px;
+    overflow-y: scroll;
+
+    &::-webkit-scrollbar {
+        width: 8px;
+    }
+    &::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    }
+    &::-webkit-scrollbar-thumb {
+        background-color: $primary;
+        outline: 1px solid $primary;
+        border-radius: 8px;
+    }
+}
+.password-help {
+    position: absolute;
+    width: 98%;
+    min-height: 200px;
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.7);
+    border-radius: 2px;
+    background-color: #FFF;
+    top: -340px;
+    padding: 20px;
+    z-index: 99;
+    display: none;
+}
+
+#result {
+    color:#FF0000;
+    &.short {
+        font-weight:bold;
+        color:#FF0000;
+    }
+    &.weak{
+        font-weight:bold;
+        color:orange;
+    }
+    &.good{
+        font-weight:bold;
+        color:#2D98F3;    
+    }
+    &.strong{
+        font-weight:bold;
+        color: limegreen;    
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .register-wrap {
+        padding: 18px 15px;
+    }
+
+    .wizard {
+        margin: 0 0 16px 0;
+        li {
+            justify-content: center;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            .bullet {
+                display: none;
+            }
+            .arrow {
+                display: none;
+            }
+            &.active {
+                .title {
+                    display: block;
+                    line-height: 17px;
+                    text-align: center;
+                    margin: 5px 0 0 0;
+                }
+            }
+            .title {
+                display: none;
+            }
+            .count {
+                display: block;
+                text-align: center;
+                font-weight: bold;
+                font-size: 16px;
+                width: 32px;
+                border: 1px solid rgba(0, 0, 0, 0.1);
+                height: 32px;
+                border-radius: 50%;
+                padding-top: 4px;
+            }
+            span {
+                font-size: 13px;
+            }
+        }
+    }
+}

@@ -1,0 +1,58 @@
+.dashboard-content {
+    background-color: #FFF;
+    padding: 40px 40px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 2px;
+}
+
+.title-sm {
+    font-size: 14px;
+            color: rgba(0, 0, 0, 0.5);
+}
+
+.section-bordered {
+    // border-top: 1px solid rgba(0, 0, 0, 0.4);
+    
+    background-color: #FFF;
+    .section-title {
+        position: relative;
+        h3 { 
+            font-size: 16px; 
+            color: #000; 
+            background-color: #efefef;
+            padding: 16px; 
+        }
+        h5 { 
+            font-size: 14px;
+            color: rgba(0, 0, 0, 0.5);
+        }
+        .title-action {
+            position: absolute;
+            right: 5px;
+            top: 5px;
+        }
+
+        &.section-collapsable a[aria-expanded="false"] {
+            img {
+                transform: rotate(-180deg);
+            }
+        }
+
+        &.section-collapsable {
+            position: relative;
+            .toggleCollapse {
+                display: block;
+                position: absolute;
+                right: 20px;
+                top: 50%;
+                margin-top: -10px;
+                img {
+                    width: 20px;
+                }
+            }
+        }
+    }
+    .sec-content {
+        padding: 0 24px 24px 24px;
+    }
+}

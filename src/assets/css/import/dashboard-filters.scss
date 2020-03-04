@@ -1,0 +1,41 @@
+#filters-row {
+	display: none;
+}
+.filtersToggle {
+	display: block !important;
+}
+
+.dashboard-filters {
+	background-color: #FFF;
+	margin-top: 22px;
+	display: flex;
+	
+	.filter-item {
+		flex: 1;
+		border-right: 1px solid #CED2D9;
+		align-self: center;
+		select {
+			width: 100%;
+			padding: 16px 20px;
+			border: none;
+			position: relative;
+			-webkit-appearance: none;
+			background-image: url('../images/caret-down.svg');
+			background-repeat: no-repeat;
+			background-position: 90% 50%;
+		}
+
+		&.btn-apply-filters {
+			button {
+				width: 100%;
+				background-color: transparent;
+				border: none;
+				outline: none;
+				color: $blue;
+				text-align: center;
+				font-weight: 600;
+				font-size: 16px;
+			}
+		}
+	}
+}

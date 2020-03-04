@@ -1,0 +1,275 @@
+.form {
+    &.form-row-mb0 {
+        .form-row {
+            margin-bottom: 0;
+        }
+    }
+    .form-row {
+        margin-bottom: 20px;
+    }
+}
+.form-control {
+    border-radius: 0;
+    min-height: 50px;
+}
+.custom-file-label {
+    border-radius: 0;
+    min-height: 50px;
+    padding: 10px 14px !important;
+}
+.custom-file-label::after {
+    min-height: 48px;
+    padding: 12px 19px;
+    border-radius: 0;
+}
+
+input:-webkit-autofill  {
+    background-color: #FFF !important;
+    transition-delay: 9999s;
+}
+
+.form-label {
+    .form-group {
+        position: relative;
+        &.active {
+             > label {
+                display: block;
+                -webkit-transform: translate3d(0, -24px, 0);
+                transform: translate3d(0, -24px, 0);
+                visibility: visible;
+            }
+           
+        }
+        .form-control {
+            z-index: 1;
+            padding-left: 18px;
+            padding-right: 18px;
+            
+            &:disabled {
+                background-color: #fff;
+                cursor: not-allowed;
+            }/*
+            &:disabled + label {
+                background-color: #e9ecef;
+            }*/
+            &:focus {
+                box-shadow: none;
+                border-color: $green;
+                &::placeholder {
+                    opacity: 0;
+                }
+            }
+            > &:not(:placeholder-shown) + label,
+            > &:focus + label {
+                display: block;
+                -webkit-transform: translate3d(0, -24px, 0);
+                transform: translate3d(0, -24px, 0);
+                visibility: visible;
+            }
+        }
+       > label {
+            font-size: 14px;
+            visibility: hidden;
+            position: absolute;
+            top: 14px;
+            left: 18px;
+            font-weight: normal;
+            color: rgba(0,0,0,0.5);
+            -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+            transition: all 0.2s ease-in-out;
+            background-color:#DDD;
+            padding: 0 8px;
+
+            &.label-fix {
+                position: relative;
+                visibility: visible;
+                display: block;
+                top: 0;
+                left: 0;
+            }
+            
+        }
+    }
+}
+
+ select.form-control {-webkit-appearance: none}
+
+.popup-outer {
+    background-color: rgba(0,0,0, 0.6);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    padding-top: 20vh;
+    overflow: auto;
+    display: none;
+    &::-webkit-scrollbar {
+        width: .5em;
+      }
+      &::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+      }
+      &::-webkit-scrollbar-thumb {
+        background-color: darkgrey;
+        outline: 1px solid slategrey;
+      }
+
+      &#popup-service {
+          .popup-container {
+            max-width: 640px;
+          }
+      }
+      
+}
+.popup-container  {
+    max-width: 472px;
+    padding: 30px;
+    margin: auto;
+    background-color: #FFF;
+    position: relative;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 4px;
+    &.popup-enroll {
+            max-width: 1000px;
+            min-height: 490px;
+            padding: 0;
+            .title {
+                font-weight: 500;
+                font-size: 24px;
+                line-height: 36px;
+                padding: 32px 0 32px 48px;
+            }
+          }
+          
+    &.popup-lg {
+        max-width: 700px;
+    }
+    .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        cursor: pointer;
+        .close-button {
+            $size: 30px;
+            height: $size;
+            width: $size;
+            position: relative;
+            box-sizing: border-box;
+            line-height: $size;
+            display: inline-block;
+        
+            &:before, &:after {
+                $width: 18px;
+                $height: 2px;
+                transform: rotate(-45deg);
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                margin-top: -$height/2;
+                margin-left: -$width/2;
+                display: block;
+                height: $height;
+                width: $width;
+                background-color: rgba(0,0,0, 0.6);
+                transition: all 0.25s ease-out;
+            }
+        
+            &:after {
+                transform: rotate(-135deg);
+            }
+        
+            &:hover {
+                &:before, &:after {
+                    transform: rotate(0deg);
+                }
+            }
+        }
+    }
+    .popup-title {
+        font-size: 24px;
+        font-weight: 500;
+        color: $blue;
+        margin: 0 0 34px 0;
+    }
+}
+.table {
+    thead {
+        tr {
+            td {
+                color: #000000;
+                font-weight: 600;
+               
+            }
+        }
+    }
+    td {
+         a {
+                    font-weight: 600;
+                    color: #0061A0;
+                }
+    }
+}
+
+.table-enroll {
+    thead,tbody {
+        tr {
+            td {
+                &:first-child {
+                    text-align: center;
+                }
+                &:last-child {
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+.custom-select{
+    min-height: 36px ;
+    border-radius: 5px;
+    background-color: #EEE;
+    border: 1px solid #AAA;
+    font-size: 13px;
+    color: #212529;
+    &:focus{
+        background-color: #EEE;
+    }
+   
+}
+
+.custom-input{
+    min-height: 36px ;
+    border-radius: 5px;
+    background-color: #EEE;
+    border: 1px solid #AAA;
+    font-size: 13px;
+    color: #212529;
+}
+
+.input-time {
+    width: 70px;
+    border: 1px solid #ced4da;
+    padding: 2px 6px;
+    text-align: center;
+    color: #495057;
+}
+
+
+
+@media screen and (max-width: 768px) {
+    .popup-outer {
+        padding: 20px;
+    }
+    .popup-container  {
+        max-width: 100%;
+    }
+    .form {
+        .form-row {
+            margin-bottom: 0;
+        }
+    }
+}

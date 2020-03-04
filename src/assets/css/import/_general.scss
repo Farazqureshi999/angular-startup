@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,700&display=swap');
+//@import url("https://use.typekit.net/xvc3uey.css");
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #FFF;
+    // font-family: utopia-std-headline, serif;
+    font-style: normal;
+    font-size: 0.8rem;
+}
+
+a {
+    color: #000;
+}
+
+ @media (min-width: 801px) {
+    .powered {text-align: right}
+    .powered .d-ib{display: inline-block;}
+    .powered .pr-16{padding-right: 16px}
+  }
+
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1240px;
+    }
+    .container-sm {
+        max-width: 1016px;
+        margin: auto;
+    }
+  
+}
+
+.table-scroll {
+    height: 225px;
+    overflow-y: scroll;
+    &::-webkit-scrollbar {
+        width: 0.6em;
+    }
+     
+    &::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.1);
+    }
+     
+    &::-webkit-scrollbar-thumb {
+      background-color: #efefef;
+      outline: 1px solid slategrey;
+    }
+
+}
+
+
+
+
+.dropdown-menu {
+    border: none;
+    border-radius: 0;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+
+.dashboard-card{
+    position: relative;
+    button{
+        position: absolute;
+        top: 4%;
+        right: 3%;
+    }
+}
+
+.dashboard-insight{
+    h6{
+        font-size: 12px;
+    }
+}
+
+.ui-state-active{
+    background-color: #81B7E3 !important;
+    border: 1px solid #81B7E3 !important;
+}
+.ui-slider-range.ui-corner-all.ui-widget-header{
+    background-color: #81B7E3 !important;
+}
+.ui-slider-handle.ui-corner-all.ui-state-default{
+    border: 1px solid #aaaaaa !important;
+    background: #efefef !important;
+
+}
+

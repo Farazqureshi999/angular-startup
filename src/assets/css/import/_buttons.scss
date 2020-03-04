@@ -1,0 +1,70 @@
+.btn {
+    border-radius: 0;
+    padding: 8px 24px;
+    text-transform: uppercase;
+
+    &:hover {
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); color: #fff;
+    }
+
+    &.link-blue {
+        &:hover {
+            color: $blue;
+        }
+    }
+    &.btn-light {
+        &:hover {
+            color: #000;
+        }
+    }
+    &.btn-small{
+        padding: 2px 6px;
+        font-size: 10px;
+    }
+    
+}
+
+.btn-default {
+    &:hover {
+        color: #000;
+    }
+}
+
+
+
+.btn-blue {
+    background-color: $blue;
+    color: #FFF !important;
+}
+
+
+
+
+
+.btn-white {
+    background-color: #FFF;
+    border: none;
+    color: #000;
+    font-weight: 600;
+    font-size: 12px;
+    &:hover {
+        color: #000;
+    }
+
+    svg,img {
+        margin-right: 10px;
+    }
+}
+
+.btn-cross{
+    position: relative;
+    top: 50%; 
+    left: 20%;
+}
+
+@media screen and (max-width:768px){
+    .btn-cross{
+        top: 0%; 
+        left: 0%;
+    }
+}

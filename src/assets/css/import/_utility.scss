@@ -1,0 +1,129 @@
+.breadcrumb {
+	background-color: transparent;
+	margin: 0 0 8px 0;
+	padding: 0;
+	li {
+		font-weight: 500;
+		color: #9999A7;
+		font-size: 14px;
+		a {
+			color: #000050;
+			display: block;
+			position: relative;
+			padding-right: 18px;
+			&::after {
+				content: '>';
+				font-size: 19px;
+			    color: #9999A7;
+			    font-weight: 500;
+			    position: absolute;
+			    right: 4px;
+			    top: -2px;
+			}
+		}
+	}
+}
+
+small {
+	text-transform: capitalize;
+}
+
+.LocationStatus {
+	width: 100%;
+}
+.tab-pane {
+	padding: 26px 0px;
+}
+
+.table-condensed {
+	font-size: 13px;
+}
+
+.table-sm td, 
+.table-sm th {
+	font-size: .8rem;
+	vertical-align: middle;
+}
+
+
+ol {
+	margin: 0;
+	padding: 0 0 0 12px;
+	font-size: 14px;
+	li {
+		margin-bottom: 6px;
+	}
+}
+.icon-actions {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	display: flex;
+	justify-content: center;
+	li {
+		margin-right: 8px;
+		&:last-child {
+			margin-right: 0;
+		}
+		.delete {
+			width: 16px;
+		}
+	}
+}
+
+.dropdown-custom {
+	position: relative;
+	.icon {
+		position: absolute;
+    	left: 19px;
+    	top: 5px;
+	}
+	select {
+		padding: 5px 20px 5px 49px;
+    	min-width: 153px;
+    	border: none;
+    	color: #000;
+    	&:focus {
+    		outline: none;
+    	}
+	}
+}
+
+.table-p0 {
+	p {
+		margin: 0;
+	}
+}
+
+.form-check-wrap {
+	.form-check {
+		margin-bottom: 8px;
+	}
+}
+
+
+.popup-terms {
+	max-width: 80%;
+}
+
+.nav-dashboard{
+	.nav-item{
+		&.active{
+			color: #ffffff;
+			background-color: #81b7e3;
+			border-color: #81b7e3;
+		}
+	}
+}
+.btn-filter{
+	position: absolute;
+	top: 18%;
+	right: 2%;
+
+}
+
+@media screen and (max-width: 768px) {
+	.popup-terms {
+		max-width: 100%;
+	}
+}
